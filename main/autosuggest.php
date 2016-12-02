@@ -1,5 +1,5 @@
 <?php
-   $db = new mysqli('localhost', 'root' ,'', 'sales');
+   $db = new mysqli('sql9.freemysqlhosting.net','sql9145020',"iGdr79ghRu", 'sql9145020');
 	if(!$db) {
 	
 		echo 'Could not connect to the database.';

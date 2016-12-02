@@ -9,13 +9,14 @@
 	$errflag = false;
 	
 	//Connect to mysql server
-	$link = mysql_connect('localhost','root',"");
+	$link = mysqli_connect('sql9.freemysqlhosting.net','sql9145020',"iGdr79ghRu");
 	if(!$link) {
-		die('Failed to connect to server: ' . mysql_error());
+		die('Failed to connect to server: ' . mysqli_error());
 	}
 	
 	//Select database
-	$db = mysql_select_db('sales', $link);
+	$db = mysqli_select_db($link,'sql9145020');
+
 	if(!$db) {
 		die("Unable to select database");
 	}
@@ -26,12 +27,12 @@
 		if(get_magic_quotes_gpc()) {
 			$str = stripslashes($str);
 		}
-		return mysql_real_escape_string($str);
+		return mysqli_real_escape_string($str);
 	}
 	
 	//Sanitize the POST values
-	$login = clean($_POST['username']);
-	$password = clean($_POST['password']);
+	$login = $_POST['username'];
+	$password = $_POST['password'];
 	
 	//Input Validations
 	if($login == '') {
@@ -53,14 +54,15 @@
 	
 	//Create query
 	$qry="SELECT * FROM user WHERE username='$login' AND password='$password'";
-	$result=mysql_query($qry);
-	
+	$result=mysqli_query($link,$qry);
+
+    //print("result".$result);
 	//Check whether the query was successful or not
 	if($result) {
-		if(mysql_num_rows($result) > 0) {
+		if(mysqli_num_rows($result) > 0) {
 			//Login Successful
 			session_regenerate_id();
-			$member = mysql_fetch_assoc($result);
+			$member = mysqli_fetch_assoc($result);
 			$_SESSION['SESS_MEMBER_ID'] = $member['id'];
 			$_SESSION['SESS_FIRST_NAME'] = $member['name'];
 			$_SESSION['SESS_LAST_NAME'] = $member['position'];
