@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#"><b>Point of Sales</b></a>
+          <a class="brand" href="#"><img src = "img/navLogo.png" height = 30px width = 30px></a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
               <li><a><i class="icon-user icon-large"></i> Welcome:<strong> <?php echo $_SESSION['SESS_LAST_NAME'];?></strong></a></li>

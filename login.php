@@ -7,13 +7,19 @@
 	
 	//Validation error flag
 	$errflag = false;
-	
+
 	//Connect to mysql server
 	$link = mysqli_connect('sql9.freemysqlhosting.net','sql9145020',"iGdr79ghRu");
 	if(!$link) {
 		die('Failed to connect to server: ' . mysqli_error());
 	}
-	
+
+
+
+
+
+
+
 	//Select database
 	$db = mysqli_select_db($link,'sql9145020');
 

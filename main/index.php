@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>
-POS
+	ALL REAL FOOD
 </title>
  <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -90,12 +90,53 @@ window.onload=startclock;
 <?php include('navfixed.php');?>
 	<?php
 $position=$_SESSION['SESS_LAST_NAME'];
-if($position=='cashier') {
+if($position=='Cashier') {
 ?>
 
-<a href="../index.php">Logout</a>
-<?php
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			<div class="well sidebar-nav">
+				<ul class="nav nav-list">
+					<li class="active"><a href="#"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li>
+					<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
+					<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
+					<br><br><br><br><br><br>
+					<li>
+						<div class="hero-unit-clock">
+
+							<form name="clock">
+								<font color="white">Time: <br></font>&nbsp;<input style="width:150px;" type="submit" class="trans" name="face" value="">
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div><!--/.well -->
+		</div><!--/span-->
+		<div class="span10">
+			<div class="contentheader">
+				<i class="icon-dashboard"></i> Dashboard
+			</div>
+			<!--<ul class="breadcrumb">
+			<li class="active">Dashboard</li>
+			</ul> -->
+			<font style=" font:bold 44px 'Aleo'; text-shadow:1px 1px 25px #000; color:#fff;"> <img src = "img/navLogo.png" height= 165px width= 165px ></font>
+			<div id="mainmain">
+
+
+
+			<a href="customer.php"><i class="icon-group icon-2x"></i><br> Customers</a>
+	<a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i><br> Sales Report</a>
+    <a href="../index.php"><font color="red"><i class="icon-off icon-2x"></i></font><br> Logout</a>
+				<?php
 }
+?>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
 if($position=='admin') {
 ?>
 	
@@ -126,10 +167,10 @@ if($position=='admin') {
 	<div class="contentheader">
 			<i class="icon-dashboard"></i> Dashboard
 			</div>
-			<ul class="breadcrumb">
+			<!--<ul class="breadcrumb">
 			<li class="active">Dashboard</li>
-			</ul>
-			<font style=" font:bold 44px 'Aleo'; text-shadow:1px 1px 25px #000; color:#fff;"><center>Harshada`s Pharmacy</center></font>
+			</ul> -->
+			<font style=" font:bold 44px 'Aleo'; text-shadow:1px 1px 25px #000; color:#fff;"> <img src = "img/navLogo.png" height= 165px width= 165px ></font>
 <div id="mainmain">
 
 

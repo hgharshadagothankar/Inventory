@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>
-POS
+ALL REAL FOOD
 </title>
 <?php
 	require_once('auth.php');
@@ -104,13 +104,27 @@ $finalcode='RS-'.createRandomPassword();
 	<div class="span2">
           <div class="well sidebar-nav">
               <ul class="nav nav-list">
-              <li><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard  </a></li> 
-			<li><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales </a>  </li>             
+				  <?php include('navfixed.php');?>
+				  <?php
+				  $position=$_SESSION['SESS_LAST_NAME'];
+				  if($position=='Cashier') {?>
+					  <li class="active"><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li>
+					  <li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
+					  <li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
+					  <br><br><br><br><br><br>
+				  <?php
+				  }else{
+				  ?>
+					  <li class="active"><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li>
+
+				  <li><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales </a>  </li>
 			<li><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
 			<li class="active"><a href="customer.php"><i class="icon-group icon-2x"></i> Customers </a>                                    </li>
 			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Suppliers</a>                                    </li>
 			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
-					<br><br><br><br><br><br>		
+					<br><br><br><br><br><br>
+
+				 <?php } ?>
 			<li>
 			 <div class="hero-unit-clock">
 		
