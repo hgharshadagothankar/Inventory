@@ -110,7 +110,7 @@ $finalcode='RS-'.createRandomPassword();
 				  if($position=='Cashier') {?>
 					  <li class="active"><a href="index.php"><i class="icon-dashboard icon-2x"></i> Dashboard </a></li>
 					  <li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
-					  <li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
+					  <li><a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><i class="icon-shopping-cart icon-2x"></i> Sales</a>  </li>
 					  <br><br><br><br><br><br>
 				  <?php
 				  }else{
