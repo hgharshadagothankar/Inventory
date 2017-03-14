@@ -18,6 +18,19 @@
       .sidebar-nav {
         padding: 9px 0;
       }
+	  #login1{
+		  background:#fff;
+		  color:#000;
+		  width:800px;
+		  height:400px;
+		  margin:auto;
+		  margin-top:90px;
+		  padding:30px;
+		  border:1px solid #484848;
+		  box-shadow:0 5px 5px 1px #000;
+		  border-radius:20px;
+		  text-align:center;
+	  }
     </style>
     <link href="main/css/bootstrap-responsive.css" rel="stylesheet">
 
