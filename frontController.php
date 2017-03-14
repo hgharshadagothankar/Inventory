@@ -49,7 +49,7 @@
 
 			<font style=" font:bold 44px 'Aleo'; text-shadow:1px 1px 15px #000; color:#fff;"><center> About MyMart</center></font>
 		<br>
-	<font style=" font:bold 18px 'Aleo'; text-shadow:1px 1px 1px red; color:black;">This is a Point of sales system for our own brand “ All Real Food”. There are two users of the system
+	<font style=" font:bold 18px 'Aleo'; text-shadow:1px 1px 1px #8f7b7b; color:black;">This is a Point of sales system for our own brand “ All Real Food”. There are two users of the system
 		<br>
 		1.	Admin<br>
 	2.	Cashier
